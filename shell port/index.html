@@ -7,7 +7,26 @@
         <link rel="icon" href="favicon.ico">
 		
 	</head>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+	<body>
+		<div class="shell" id = "terminal"> 
+		login as: gowtham </br></br>
+		
+		Department: Computer Science and Engineering <br>
+		University: Anna University <br><br>
+		
+		Type in Linux commands to know more about me <br><br>
+		
+		ls - List Directory<br>
+		clear - Clear Terminal<br>
+		whoami - More Info about me<br><br>
+		
+		<span id = "command1">{<span id="user">gowtham@shell</span>:<span id = "s1">~</span>}</span>
+		<input id= "input1" type="text" onkeydown="myFunction()" autofocus >
+		<br id = "1">
+		</div>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			var curCount = 0;
@@ -86,22 +105,5 @@
 		}
 	</script>
 
-	<body>
-		<div class="shell" id = "terminal"> 
-		login as: gowtham </br></br>
-		
-		Department: Computer Science and Engineering <br>
-		University: Anna University <br><br>
-		
-		Type in Linux commands to know more about me <br><br>
-		
-		ls - List Directory<br>
-		clear - Clear Terminal<br>
-		whoami - More Info about me<br><br>
-		
-		<span id = "command1">{<span id="user">gowtham@shell</span>:<span id = "s1">~</span>}</span>
-		<input id= "input1" type="text" onkeydown="myFunction()" autofocus >
-		<br id = "1">
-		</div>
 	</body>
 </html>

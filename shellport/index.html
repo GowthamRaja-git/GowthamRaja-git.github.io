@@ -1,32 +1,11 @@
 <html>
 	<head>
-                <meta charset="UTF-8">
-
-		<title>Gowtham Rajasekaran</title>
+		<title> Gowtham Rajasekaran </title>
 		<link href="stylesheets/styles.css" type="text/css" rel="stylesheet">
-        <link rel="icon" href="favicon.ico">
+                <link rel="icon" href="favicon.ico">
 		
 	</head>
-	
-	<body>
-		<div class="shell" id = "terminal"> 
-		login as: gowtham </br></br>
-		
-		Department: Computer Science and Engineering <br>
-		University: Anna University <br><br>
-		
-		Type in Linux commands to know more about me <br><br>
-		
-		ls - List Directory<br>
-		clear - Clear Terminal<br>
-		whoami - More Info about me<br><br>
-		
-		<span id = "command1">{<span id="user">gowtham@shell</span>:<span id = "s1">~</span>}</span>
-		<input id= "input1" type="text" onkeydown="myFunction()" autofocus >
-		<br id = "1">
-		</div>
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			var curCount = 0;
@@ -66,7 +45,7 @@
 				{
 					outCount++;
 					$("#terminal").append('<span id = "output'+ outCount +'"> Hi, <font color = "#0f0">I\'m Gowtham </font><br>\
-							I am a Computer Science and Engineering Student from Kingston Engineering College. </span><br id = "out'+ outCount +'">');
+							I am a Computer Science Engineering Student from Kingston Engineering College. </span><br id = "out'+ outCount +'">');
 				}
 				else if("ls" == command)
 				{
@@ -97,7 +76,7 @@
 				
 				Count++;
 				addCode = '<span id = "command'+ Count + '">\
-					{<span id="user">gowtham@shell</span>:<span id = "s1">~</span>}</span>\
+					{<span id="user">gowtham@putty</span>:<span id = "s1">~</span>}</span>\
 					<input id = "input'+ Count +'" type="text" onkeydown="myFunction()"><br id = "' + Count + '">';
 				$("#terminal").append(addCode);
 				$("#input" + Count).focus();
@@ -105,5 +84,22 @@
 		}
 	</script>
 
+	<body>
+		<div class="putty" id = "terminal"> 
+		login as: gowtham </br></br>
+		
+		Department: Computer Science and Engineering <br>
+		University: Anna University <br><br>
+		
+		Type in Linux commands to know more about me <br><br>
+		
+		ls - List Directory<br>
+		clear - Clear Terminal<br>
+		whoami - More Info about me<br><br>
+		
+		<span id = "command1">{<span id="user">gowtham@putty</span>:<span id = "s1">~</span>}</span>
+		<input id= "input1" type="text" onkeydown="myFunction()" autofocus >
+		<br id = "1">
+		</div>
 	</body>
 </html>

@@ -10,7 +10,7 @@ input{
 	background-color: black;
 }
 input:focus {outline: none; }
-.shell{
+.putty{
 	color 			: white;
 	font-size		: 15px;
 	font-family		: courier;

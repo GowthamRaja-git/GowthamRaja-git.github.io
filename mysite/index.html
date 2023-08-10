@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title> Gowtham Rajasekaran </title>
+		<link href="stylesheets/styles.css" type="text/css" rel="stylesheet">
+		
+	</head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var curCount = 0;
+					   
+			//var myVar=setInterval(function(){blinkTimer()},500);
+
+			function blinkTimer()
+			{		
+				var body = $("#command").html(); 
+				
+				if(body.substring(body.length-1, body.length) == "|")	
+				{
+					$("#command").html($("#command").html().substring(0, body.length-1)); // remove it
+					$("#command").append(" ");
+				}
+				else
+				{
+					if(body.substring(body.length-1, body.length) == " ")
+					{
+						$("#command").html($("#command").html().substring(0, body.length-1)); // remove it
+					}
+					$("#command").append("|"); // else write it
+				}	
+			}
+		});
+				
+		var Count = 1;
+		var outCount = 0;
+		function myFunction()
+		{
+			if(event.which == 13)
+			{
+				var addCode;
+				event.preventDefault();
+				var command = document.getElementById("input" + Count).value;
+				if("whoami" == command)
+				{
+					outCount++;
+					$("#terminal").append('<span id = "output'+ outCount +'"> Hi, <font color = "#0f0">I\'m Gowtham </font><br>\
+							I am a Computer Science Engineering Student from Kingston Engineering College. </span><br id = "out'+ outCount +'">');
+				}
+				else if("ls" == command)
+				{
+					outCount++;
+					$("#terminal").append('<span id = "output'+ outCount +'"> \
+							<a href="https://github.com/GowthamRaja-git">GitHub</a>\
+							<a href="https://www.linkedin.com/in/gowtham-rajasekaran-21a56624a/">LinkedIn</a>\
+							</span><br id = "out'+ outCount +'">');
+				}
+				else if("clear" == command)
+				{
+					for (i = 1; i <= Count; i++) 
+					{ 
+						document.getElementById("command" + i).parentNode.removeChild(document.getElementById("command" + i));
+						document.getElementById("input" + i).parentNode.removeChild(document.getElementById("input" + i));
+						document.getElementById(i).parentNode.removeChild(document.getElementById(i));
+					}
+					for(i = 1; i <= outCount; i++)
+					{
+						document.getElementById("output" + i).parentNode.removeChild(document.getElementById("output" + i));
+						document.getElementById("out" + i).parentNode.removeChild(document.getElementById("out" + i));
+					}
+					Count = 0;
+					outCount = 0;
+				}
+				$("#input" + Count).val('');
+				$("#command" + Count).append( ' ' + command);
+				
+				Count++;
+				addCode = '<span id = "command'+ Count + '">\
+					{<span id="user">gowtham@putty</span>:<span id = "s1">~</span>}</span>\
+					<input id = "input'+ Count +'" type="text" onkeydown="myFunction()"><br id = "' + Count + '">';
+				$("#terminal").append(addCode);
+				$("#input" + Count).focus();
+			}
+		}
+	</script>
+
+	<body>
+		<div class="putty" id = "terminal"> 
+		login as: gowtham </br></br>
+		
+		Department: Computer Science and Engineering <br>
+		University: Anna University <br><br>
+		
+		Type in Linux commands to know more about me <br><br>
+		
+		ls - List Directory<br>
+		clear - Clear Terminal<br>
+		whoami - More Info about me<br><br>
+		
+		<span id = "command1">{<span id="user">gowtham@putty</span>:<span id = "s1">~</span>}</span>
+		<input id= "input1" type="text" onkeydown="myFunction()" autofocus >
+		<br id = "1">
+		</div>
+	</body>
+</html>

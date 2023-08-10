@@ -1,0 +1,33 @@
+body{
+	background-color: black;
+}
+
+input{
+	color 			: white;
+	font-size		: 15px;
+	font-family		: courier;
+	border: 0px;
+	background-color: black;
+}
+input:focus {outline: none; }
+.putty{
+	color 			: white;
+	font-size		: 15px;
+	font-family		: courier;
+	margin-top		: 100px;
+	margin-left		: auto;
+	margin-right	: auto;
+	width			: 800px;
+	height			: 300px;
+#	background-color: #d0e4fe;
+}
+a {
+	color: #0bc;
+	text-decoration: none;
+}
+#user{
+	color: #0f0
+}
+#s1{
+	color: #ff0096;
+}

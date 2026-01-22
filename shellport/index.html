@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Gowtham Rajasekaran </title>
+		<title> CommandLine CV </title>
 		<link href="stylesheets/styles.css" type="text/css" rel="stylesheet">
                 <link rel="icon" href="favicon.ico">
 		
@@ -45,16 +45,55 @@
 				{
 					outCount++;
 					$("#terminal").append('<span id = "output'+ outCount +'"> Hi, <font color = "#0f0">I\'m Gowtham </font><br>\
-							I am a Computer Science Engineering Student from Kingston Engineering College. </span><br id = "out'+ outCount +'">');
+							2024 - Computer Science Engineering Graduate | Backend Developer | <br>\
+							Building scalable Enterprise Applications. </span><br id = "out'+ outCount +'">');
 				}
 				else if("ls" == command)
 				{
 					outCount++;
 					$("#terminal").append('<span id = "output'+ outCount +'"> \
-							<a href="https://github.com/GowthamRaja-git">GitHub</a>\
-							<a href="https://www.linkedin.com/in/gowtham-raja-21a56624a/">LinkedIn</a>\
+							<a href="https://github.com/GowthamRaja-git" target="_blank">GitHub</a>\
+							<a href="https://www.linkedin.com/in/gowtham-rajasekaran-21a56624a/" target="_blank">LinkedIn</a>\
+							<a href="https://gowthamraja-git.github.io/Portfolio/" target="_blank">Portfolio</a>\
+							<a href="https://leetcode.com/u/gowthamvim/" target="_blank">Leetcode</a>\
+							<a href="https://www.naukri.com/code360/profile/Gowthamvim" target="_blank">Code360</a>\
 							</span><br id = "out'+ outCount +'">');
 				}
+
+				else if("workexp" == command)
+				{
+					outCount++;
+					$("#terminal").append('<span id="output' + outCount + '">' +
+                      'Im a .NET Backend Developer with 1.6 years of hands-on industry experience<br>' +
+                      'Built REST APIs, Enterprise Applications, and scalable backend systems<br>' +
+                      'Worked with .NET Core, ASP.NET MVC, .NET FRAMEWORK 4.8, REST APIs, C#, HTML5, CSS3, JavaScript, Python, Flask, SQL Server' +
+					  '</span><br id="out' + outCount + '">'
+					);
+				}
+
+				else if (command === "skills") {
+    outCount++;
+    $("#terminal").append(`
+        <span id="output${outCount}">
+            <span style="color:#0f0">TECHNICAL SKILLS</span><br>
+
+            LANGUAGES:<br>
+            &nbsp;C# (.NET) • Angular • Java (Spring Boot) • C++ • Python • Data Structures & Algorithms<br>
+
+            TECHNOLOGIES:<br>
+            &nbsp;.NET • ASP.NET MVC • MySQL • LINQ<br>
+
+            CONCEPTS:<br>
+            &nbsp;Object-Oriented Programming • REST API • Design Patterns<br>
+
+            TOOLS:<br>
+            &nbsp;Fork • Git • Swagger • Postman • Vim • GitHub Copilot • Claude • AI Prompting
+        </span>
+        <br id="out${outCount}">
+    `);
+}
+
+
 				else if("clear" == command)
 				{
 					for (i = 1; i <= Count; i++) 
@@ -76,7 +115,7 @@
 				
 				Count++;
 				addCode = '<span id = "command'+ Count + '">\
-					{<span id="user">gowtham@putty</span>:<span id = "s1">~</span>}</span>\
+					{<span id="user">gowtham@vim</span>:<span id = "s1">~</span>}</span>\
 					<input id = "input'+ Count +'" type="text" onkeydown="myFunction()"><br id = "' + Count + '">';
 				$("#terminal").append(addCode);
 				$("#input" + Count).focus();
@@ -85,19 +124,22 @@
 	</script>
 
 	<body>
-		<div class="putty" id = "terminal"> 
-		login as: gowtham </br></br>
+		<div class="putty" id = "terminal">
+		<span style="color:#0f0">Gowtham Rajasekaran</span><br></br>
 		
-		Department: Computer Science and Engineering <br>
-		University: Anna University <br><br>
+		Designation: Software Engineer <br>
+		Experience: 1.6 Years <br><br>
+		
 		
 		Type in Linux commands to know more about me <br><br>
 		
 		ls - List Directory<br>
 		clear - Clear Terminal<br>
-		whoami - More Info about me<br><br>
+		whoami - More Info about me<br>
+		workexp - My Work Experience<br>
+		skills - My Skills <br><br>
 		
-		<span id = "command1">{<span id="user">gowtham@putty</span>:<span id = "s1">~</span>}</span>
+		<span id = "command1">{<span id="user">gowtham@vim</span>:<span id = "s1">~</span>}</span>
 		<input id= "input1" type="text" onkeydown="myFunction()" autofocus >
 		<br id = "1">
 		</div>
